@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HNG Stage 1</title>
+   <link rel="stylesheet" href="style.css">
+   
+</head>
+
+<body>
+   <main>
+     <article>
+        <!-- Slack Display Picture -->
+        <img src="./1677848265614.jpg" alt=" Badmus Eniola" data-testid="slackDisplayImage">
+        
+        <!-- Slack Name -->
+        <h1 data-testid="slackUserName">Badmus Eniola</h1>
+        
+        <!-- Slack Email -->
+        <p data-testid="slackEmail">Slack Email: somodbadmus@gmail.com</p>
+
+        <!-- Current Day of the Week -->
+        <p data-testid="currentDayOfTheWeek"></p>
+        
+        <!-- Current UTC Time -->
+        <p data-testid="currentUTCTime"></p>
+        
+        <!-- Track -->
+        <p data-testid="myTrack">Frontend</p>
+        
+        <!-- GitHub URL -->
+        <a href="https://github.com/somod-gif" data-testid="githubURL">GitHub Repository</a>
+     </article>
+    <section>
+        <h2>My Goals For the next 2 years</h2>
+        <!-- <ul> -->
+            <p>Master React and build complex web apppcations.</p>
+            <p>Contribute to open-source projects.</p>
+            <p>Learn backend development and databases.</p>
+            <p>Develop a personal project and deploy it.</p>
+        </ul>
+    </section>
+    <section>
+        <h2>Useful Links</h2>
+        <!-- <ul> -->
+            <p><a href="https://hng.tech/learn" data-testid="hngLink">HNG Learn</a></p>
+            <p><a href="https://keyword.dog" data-testid="keywordLink">Keyword.dog</a></p>
+            <p><a href="https://scrapeanyweb.site" data-testid="scrapeanywebLink">Scrape Any Web</a></p>
+        </ul>
+    </section>
+   </main> 
+</body>
+    <script>
+        const daysOfWeek = [
+                "Sunday",
+                "Monday",
+                "Tuesday",
+                "Wednesday",
+                "Thursday",
+                "Friday",
+                "Saturday",
+            ];
+            const currentDay = new Date().getDay();
+            const currentUTC = new Date().toUTCString();
+
+            document.querySelector(
+                '[data-testid="currentDayOfTheWeek"]'
+            ).textContent = `Current Day of the Week: ${daysOfWeek[currentDay]}`;
+            document.querySelector(
+                '[data-testid="currentUTCTime"]'
+            ).textContent = `Current UTC Time: ${currentUTC}`;
+    </script>
+</html>
